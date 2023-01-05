@@ -1,0 +1,367 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin:0;
+}
+
+h1, h2 {
+    margin:0;
+}
+
+
+/*---------------------------------------Cabeçalho--------------------------*/
+header {
+    width: 100%;
+    height: 80px;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    width: 80%;
+    height: 100%;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.logo {
+    height: 100%;/*Sem isso a img aumenta de tamanho*/
+    display: flex;
+    align-items: center;
+}
+
+.logo_img {
+    height: 100%;
+}
+
+.box_menu nav {
+    position: relative;
+}
+
+.menu_mobile {
+    width: 60px;
+    height: 60px;
+    display: none;
+}
+
+.bar_menu {
+    width: 100%;
+    height: 5px;
+    margin-bottom: 5px;
+    background-color: #fb414e;
+}
+
+.menu {
+    margin: 0;
+    list-style: none;
+    padding: 0;
+    display: flex;
+    gap: 5px;
+    text-transform: uppercase;
+}
+
+.menu a {
+    padding: 10px;
+    text-decoration: none;
+    display: block;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    color: #000;
+    font-weight: bold;
+    transition: all 1.5s ease;
+    box-shadow: inset 0 0 0 0 #fb414e;
+}   
+
+.menu a:hover {
+    box-shadow: inset 200px 0 0 0 #fb414e;/*Faz uma sombra interna partindo da esquerda*/
+    color:#fff;
+}
+
+
+/*------------------------------------Compra----------------------------------------*/
+.geral {
+    background-color: #fb414e;
+    height: calc(100vh - 80px);
+    display: flex;
+    justify-content: center;
+}
+
+.box_buy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    font-family: 'Nunito', sans-serif;
+    color: #fff;
+}
+
+.box_buy h1 {
+    margin-bottom: 20px;
+    font-size: 40px;
+}
+
+.box_buy h2 {
+    font-size: 20px;
+    margin-bottom: 20px;
+}
+
+.bt_buy {
+    padding: 10px 15px;
+    position: relative;
+    display: inline-block;
+    background-color: #fb414e;
+    font-weight: bold;
+    border: 1px solid #fff;
+    color: #fff;
+    overflow: hidden;
+    transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.bt_buy:hover {
+    letter-spacing: 3px;
+}
+
+#bt_effect {
+    position: absolute;
+    width: 20%;
+    height: 300%;
+    top: -100%;
+    left: -45%;
+    transform: rotate(45deg);
+    background-color: #fff;
+    transition: all 650ms cubic-bezier(0.19, 1, 0.22, 1);
+}
+
+.bt_buy:hover #bt_effect{
+    left: 145%;
+}
+
+
+.box_produto {
+    width: 50%;
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img_produto {
+    width: 100%;
+}
+
+
+/*------------------------------------------Informações do Produto-------------------------*/
+.info {
+    display: flex;
+    justify-content: center;
+}
+
+
+.info_headline {
+    margin-top: 50px;
+    margin-bottom: 30px;
+    width: 60%;
+    text-align: center;
+    font-family: 'Nunito', sans-serif;
+    color: #000;
+}
+
+.info_headline h1 {
+    font-size: 30px;
+    font-weight: bold;
+}
+
+.info_headline h2 {
+    font-size: 15px;
+    color: #8d8d8d;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.info_body {
+    width: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.img_info {
+    width: 100%;
+    flex: 1;
+}
+
+.box_cards {
+    flex: 1;
+    padding: 0px 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+}
+
+.deslocada {
+    position: relative;
+    top: 20px;
+}
+
+.card {
+    margin: 10px;
+    padding: 20px;
+    text-align: center;
+    border: 2px solid #fc436b;
+    border-radius: 20px;
+    font-family: 'Nunito', sans-serif;
+    transition: all 0.5s linear;
+}
+
+.card:hover {
+    transform: scale(1.05);
+    border-width: 3px;
+}
+
+.card h1 {
+    margin-top: 15px;
+    margin-bottom: 15px;
+    font-size: 20px;
+    color: #000;
+    font-weight: bold;
+}
+
+.card h2 {
+    font-size: 15px;
+    color: #8d8d8d;
+}
+
+
+/*----------------------------------------------Footer---------------------------------*/
+footer {
+    display: flex;
+    justify-content: center;
+}
+
+footer .container {
+    justify-content: center;
+    gap: 10px;
+}
+
+footer span {
+    margin-right: 10px;
+    font-family: 'Nunito', sans-serif;
+    font-size: 15px;
+    text-align: center;
+}
+
+footer a {
+    text-decoration: none;
+    color: #000;
+}
+
+footer a:hover {
+    color: #fc436b;
+    font-weight: bold;
+}
+
+.contato {
+    display: flex;
+}
+
+.contato .card_icon {
+    transition: all 0.5s linear;
+}
+
+.contato .card_icon:hover {
+    transform: scale(1.2);
+}
+
+/*-------------------------------------------Resposividade--------------------------*/
+@media screen and (max-width:1100px) {
+    .menu {
+        display: none;
+    }
+
+   .menu_mobile {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+    }
+
+    .geral .container {
+        flex-direction: column;
+    }
+
+    .box_buy {
+        flex: 2;
+    }
+
+    .box_produto {
+        max-width: 300px;
+        width: 100%;
+    }
+
+    .card h2 {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width:780px) {
+    .logo_img {
+        height: 50%;
+    }
+
+    .geral .container {
+        flex-direction: column;
+    }
+
+
+    .box_buy h1 {
+        font-size: 30px;
+    }
+
+    .box_buy h2 {
+        font-size: 20px;
+    }
+
+    
+
+    .info_body .box_produto {
+        display: none;
+    }
+
+    .box_cards {
+        flex-direction: column;
+    }
+
+    .deslocada {
+        top: 0px;
+    }
+
+    footer .container {
+        flex-direction: column;
+    }
+
+}
+
+@media screen and (max-width: 400px) {
+    .logo_img {
+        height: 30%;
+    }
+
+    .box_buy h1 {
+        font-size: 20px;
+    }
+
+    .box_buy h2 {
+        font-size: 15px;
+    }
+}
+
+
+
